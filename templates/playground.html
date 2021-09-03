@@ -22,7 +22,7 @@
         #blueBox {
             width: 200px;
             min-height: 200px;
-            background-color: blue;
+            /* background-color: blue; */
             border: 3px solid black;
             margin-top: 40px, auto;
         }
@@ -37,7 +37,7 @@
     <h1>Welcome!</h1>
     <div class="flex">
         {% for i in range(0, times): %}
-            <div id="blueBox"></div>
+            <div id="blueBox" style="background-color: {{color}};"></div>
         {%endfor%}
     </div>    
 </body>
