@@ -13,9 +13,13 @@ def dojo():
 def say_name(name):
     return f"Hi {name}!"
 
-@app.route('/repeat/int(<num>)/<phrase>')
+@app.route('/repeat/<int:num>/<string:phrase>')
 def number_phrase(num, phrase):
-    return f"{num}*{phrase}"
+    message = ""
+    for i in range (0, num):
+        message += phrase
+    return message
+
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)    # Run the app in debug mode.
